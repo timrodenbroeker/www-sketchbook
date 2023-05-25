@@ -1,0 +1,68 @@
+
+@font-face {
+  font-family: 'NimbusSans';
+  src: url('/media/nimbus.woff2') format('woff2'),
+       url('/media/nimbus.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "NimbusSans", "Helvetica", "Arial", sans-serif;
+}
+
+html, body {
+  margin:0;
+}
+
+body {
+  background: black;
+  color: #f1f1f1;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+  
+  /* space-mono-700 - latin */
+  @font-face {
+    font-family: 'SpaceMono';
+    font-weight: bold;
+    src: url('../../fonts/SpaceMono-Bold.woff2') format('woff2'), 
+         url('../../fonts/SpaceMono-Bold.woff') format('woff')
+  }
+  
+
+#stage {
+    padding-top: 100px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	font-size: 10.4vw;
+	font-weight: bold;
+
+	line-height:90%;
+	
+	cursor: pointer;
+}
+
+#stage a {
+    font-family: 'SpaceMono';
+    font-weight: bold;
+}
+
+a,a:hover {
+	color: #f1f1f1;
+	text-decoration: none;
+    color: #f1f1f1;
+}

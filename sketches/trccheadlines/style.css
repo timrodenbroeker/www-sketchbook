@@ -1,0 +1,32 @@
+body {
+    margin:0;
+}
+
+@font-face {
+    font-family: 'NimbusSans';
+    src: url('/media/nimbus.woff2') format('woff2'),
+         url('/media/nimbus.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+main {
+
+
+}
+
+h1 {
+    font-size: calc(26px + 10vw);
+    font-weight: normal;
+    text-align: center;
+    font-family: 'NimbusSans',sans-serif;
+}
+
+.off {
+    transform: translateY(10px);
+}
+
+h1 span {
+    display: inline-block;
+}

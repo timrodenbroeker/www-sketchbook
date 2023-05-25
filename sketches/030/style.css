@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'NimbusSans';
+    src: url('/media/nimbus.woff2') format('woff2'),
+         url('/media/nimbus.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "NimbusSans", "Helvetica", "Arial", sans-serif;
+}
+
+html, body {
+    margin:0;
+}
+
+body {
+    background: black;
+    color: #f1f1f1;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+body {
+    width: 200%;
+    height: 200vh;
+    display: block;
+    position: relative;
+}
+
+img {
+    width: 300px;
+}

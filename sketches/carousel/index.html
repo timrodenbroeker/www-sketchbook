@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  
+<style>
+
+  body {
+      background: white;
+      margin: 0;
+  }
+
+  #main-nav {
+      display: none;
+  }
+  #sketch {
+
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: white;
+      overflow: hidden;
+      opacity: 1;
+      position: absolute;;
+  }
+
+  .cars {
+      position: relative;
+      width: 20vw;
+      height: 16vw;
+      transform-style: preserve-3d;
+      animation: animate 10s linear infinite;
+      transform: translateX(300px);
+
+  }
+  .cars .plate {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      
+      transform-origin: center;
+      transform-style: preserve-3d;
+      transform: rotateY(calc(var(--i) * 40deg)) translateZ(20vw) translateX(20vw);
+     background: white;
+  }
+  .cars .plate img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      opacity: 1;
+      transition: opacity 0.4s ease;
+  }
+
+  .cars .plate:hover img {
+      opacity: 1;
+  }
+
+  @keyframes animate {
+      0% {
+          transform: perspective(1000px) rotateY(0deg) rotateX(360deg) translateZ(0vw);
+      }
+      100% {
+          transform: perspective(1000px) rotateY(720deg) rotateX(0deg) translateZ(20vw);
+      }
+  }
+
+  #overlay {
+
+      position: fixed;
+      top:0;
+      left:0;
+      width: 100%;
+      height:100vh;
+  }
+
+  #ma .ma-hero p {
+      color: black;
+  }
+  #ma .ma-hero h1 {
+      color: black;
+      pointer-events: none;
+  }
+
+  footer {
+      display: none;
+  }
+</style>
+  
+  
+</body>
+<div id="sketch">
+  <div class="cars">
+
+    <div class="plate" style="--i:1"><img src="simone.png"></div>
+    <div class="plate" style="--i:2"><img src="simone.png"></div>
+    <div class="plate" style="--i:3"><img src="simone.png"></div>
+    <div class="plate" style="--i:4"><img src="simone.png"></div>
+    <div class="plate" style="--i:5"><img src="simone.png"></div>
+    <div class="plate" style="--i:6"><img src="simone.png"></div>
+    <div class="plate" style="--i:7"><img src="simone.png"></div>
+    <div class="plate" style="--i:8"><img src="simone.png"></div>
+
+  </div>
+</div>
+
+    
+    
+    <script src="./app.js"></script>
+</html>

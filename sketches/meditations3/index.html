@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <style>
+    @font-face {
+      font-family: "Inter";
+      src: url("../assets/Inter-SemiBold.woff") format("woff");
+      font-weight: normal;
+    }
+
+    body,
+    html {
+      margin: 0;
+      font-family: Inter;
+    }
+
+    body {
+      background-image: url("../../media/a67.jpg");
+      background-position: center top;
+      background-size: cover;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #thegrid {
+      width: 100% !important;
+      max-width: 100% !important;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      animation-name: example;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    @keyframes example {
+        from {
+        letter-spacing: 0px;
+      }
+      to {
+        letter-spacing: 30px;
+      }
+    }
+
+    p {
+      margin: 0;
+      position: sticky;
+      top: 0;
+      font-size: 20px;
+      text-align: justify;
+      /* word-break: break-all; */
+    }
+
+    .grid-item:nth-child(odd) p {
+      animation-name: example;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      background: red;
+    }
+    .grid-item:nth-child(even) p {
+      animation-name: example;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+      background: white;
+    }
+  </style>
+  <body>
+    <section id="thegrid"></section>
+  </body>
+  <script>
+    function buildGrid(data) {
+      var grid = document.getElementById("thegrid");
+
+      data.forEach((item) => {
+        var markup = `
+        <div class="grid-item">
+        <p>
+          ${item.english}
+          </p>
+        </div>
+        `;
+
+        grid.insertAdjacentHTML("beforeend", markup);
+      });
+    }
+    fetch("../../media/meditations_short.json")
+      .then((response) => response.json())
+      .then((json) => buildGrid(json));
+  </script>
+</html>

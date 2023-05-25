@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  
+  <main>
+
+
+    <div>
+      <h1 style="color: yellow;letter-spacing: -2vw;font-family: monospace;-webkit-text-stroke: 0.3vw #000000; display: inline-block;">
+        <span style="white-space: nowrap;">Hi<span style="transform: translateY(-4vw) translateX(1vw) skew(-20deg)">e</span>r</span> <span style="white-space: nowrap;">st<span style="transform: translateY(1vw) translateX(-0.5vw) skew(20deg)">e</span>ht</span> <span style="white-space: nowrap;">e<span style="transform: translateY(-3vw) translateX(1vw) skew(-20deg)">i</span>ne</span> <span style="white-space: nowrap;">Ueber<span style="transform: translateY(3vw) translateX(-0.5vw) skew(-20deg)">s</span>chrift</span>
+      </h1>
+    </div>
+
+    <div>
+      <h1 style="font-size: 20vw;line-height: 60%; width: 100%;letter-spacing: -2vw;font-family: times;-webkit-text-stroke: 0.2vw #000000; color: white; display: inline-block; text-align: center;">
+        <span style="white-space: nowrap;">Hi<span style="transform: translateY(-4vw) translateX(1vw) skew(-20deg)">e</span>r</span> <span style="white-space: nowrap;">st<span style="transform: translateY(1vw) translateX(-0.5vw) skew(20deg)">e</span>ht</span><br><span style="white-space: nowrap;">e<span style="transform: translateY(-3vw) translateX(1vw) skew(-20deg)">i</span>ne</span> <span style="white-space: nowrap;">Ueber<span style="transform: translateY(3vw) translateX(-0.5vw) skew(-20deg)">s</span>chrift</span>
+      </h1>
+    </div>
+
+
+    <div>
+      <h1 style="letter-spacing: -0.3vw;-webkit-text-stroke: 0.3vw #000000; color: transparent; display: inline-block;">
+        <span style="white-space: nowrap;">Hi<span style="transform: translateY(-4vw) translateX(1vw) skew(-20deg)">e</span>r</span> <span style="white-space: nowrap;">st<span style="transform: translateY(1vw) translateX(-0.5vw) skew(20deg)">e</span>ht</span> <span style="white-space: nowrap;">e<span style="transform: translateY(-3vw) translateX(1vw) skew(-20deg)">i</span>ne</span> <span style="white-space: nowrap;">Ueber<span style="transform: translateY(3vw) translateX(-0.5vw) skew(-20deg)">s</span>chrift</span>
+      </h1>
+    </div>
+
+    <div>
+      <h1 style="-webkit-text-stroke: 4px #000000; color: transparent;">
+        Hier steht eine Ueberschrift
+      </h1>
+    </div>
+    
+    
+    <!-- 
+      ////////////////////////////////////////////////
+    -->
+
+    <style>
+h1 {
+  line-height: 100%;
+}
+      .h789dustp {
+        color: white;
+        position: absolute; font-size: 100px;
+      }
+    </style>
+
+<div>
+    <h1 id="h789parent" style="position: relative; margin: 0;">
+      Hier steht eine Headline
+    </h1>
+</div>
+
+<script>
+
+var chars = ["#","+","/","?"];
+
+for (let i = 0; i < 10; i++) {
+  var iDiv = document.createElement('div');
+  iDiv.className = 'h789dustp';
+  iDiv.innerHTML = chars[Math.floor(Math.random() * chars.length)];
+  document.getElementById('h789parent').appendChild(iDiv);
+   
+}
+
+var dustparticles = document.getElementsByClassName("h789dustp");
+
+setInterval(function(){
+  for (var i = 0; i < dustparticles.length; i++) {
+    dustparticles[i].style.left = Math.random() * window.innerWidth + "px";
+    dustparticles[i].style.top = Math.random() * h789parent.offsetHeight + "px";
+  }
+}, 100);
+
+</script>
+
+
+<!-- 
+  ////////////////////////////////////////////////
+-->
+
+
+    <div style="background-attachment: fixed; background-image: url(a.png); mix-blend-mode: difference;background-size:100% 100%;">
+      <h1 style="position: relative; mix-blend-mode: difference;">
+        Hier steht eine Ueberschrift
+      </h1>
+    </div>
+
+    <!-- 
+  ////////////////////////////////////////////////
+-->
+
+
+    <div style="background-image: url(a.png)">
+      <h1 style="position: relative; mix-blend-mode: difference;">
+        <div style="color: white;position: absolute; top:10px; left: 10px; width:100%;height:100%;">Hier steht eine Headline</div>
+        Hier steht eine Headline
+      </h1>
+    </div>
+
+
+    <!-- 
+  ////////////////////////////////////////////////
+-->
+
+    <div style="background-attachment: fixed; background-image: url(102.jpg);background-size:100% 100%;">
+    <h1 style="position: relative; mix-blend-mode: difference;">
+      <div style="color: white;position: absolute; top:10px; left: 10px; width:100%;height:100%; filter: invert(50%);">Hier steht eine Headline</div>
+      Hier steht eine Headline
+      
+    </h1>
+
+  </div>
+
+  <!-- 
+  ////////////////////////////////////////////////
+-->
+
+
+    <h1 style="position: relative; mix-blend-mode: difference;">
+      Hier steht eine Headline
+      <div style="position: absolute; top:10px; left:0;width:100%;height:100%;mix-blend-mode: difference;">Hier steht eine Headline</div>
+    </h1>
+
+    <!-- 
+  ////////////////////////////////////////////////
+-->
+
+    <h1 style="position: relative; color: white;">
+      Hier steht eine Headline
+      <img style="position: absolute; top:0; left:0;width:100%;height:100%;mix-blend-mode: difference;" src="1.jpg">
+    </h1>
+
+    <!-- 
+  ////////////////////////////////////////////////
+-->
+
+    <h1 style="filter: blur(10px);">Hier steht eine Headline</h1>
+
+
+       <!-- 
+  ////////////////////////////////////////////////
+-->
+
+<h1 style="background: linear-gradient(
+  90deg, 
+  #000000,
+  #FFFFFF,
+  #000000
+);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-align: center;;">Hier steht eine Headline</h1>
+
+
+    <!-- 
+  ////////////////////////////////////////////////
+-->
+
+    <h1 style="background: linear-gradient(
+      10deg, 
+      #000000,
+      #FFFFFF,
+      #000000
+    );-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-align: center;;">Hier steht eine Headline</h1>
+
+    <!-- 
+  ////////////////////////////////////////////////
+-->
+
+    <h1 style="transform: skew(9deg); letter-spacing: -0.04em;">Hier steht eine Headline</h1>
+<!-- 
+  ////////////////////////////////////////////////
+-->
+
+    <h1 id="head1">Hier steht eine Headline</h1>
+
+<!-- 
+  ////////////////////////////////////////////////
+-->
+
+<h1 style="text-shadow: -5px  10px 10px #000000">Hier steht eine Headline</h1>
+
+    <!-- 
+  ////////////////////////////////////////////////
+-->
+
+    <h1 style="text-shadow: -5px  10px 10px #000000, 0 5px #000000, 5px 0 #000000, 0 -5px #000000;">Hier steht eine Headline</h1>
+<!-- 
+  ////////////////////////////////////////////////
+-->
+    <h1 style="text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;">Hier steht eine Headline</h1>
+<!-- 
+  ////////////////////////////////////////////////
+-->
+    <h1 style="text-shadow: -5px 0 yellow, 0 5px yellow, 5px 0 yellow, 0 -5px yellow;">Hier steht <em>e</em>ine Headline</h1>
+<!-- 
+  ////////////////////////////////////////////////
+-->
+    <h1 id="headline">Hier st<em>e</em>ht eine Headline</h1>
+
+    <script>
+
+    var head = document.getElementById("headline");
+
+    var head1 = document.getElementById("head1");
+    var head1txt = head1.innerText;
+
+    var s = head1txt.split('');
+
+    var newMarkup = "";
+    for (var i = 0; i < head1txt.length;i++) {
+
+        if (head1txt[i] == " ") {
+            newMarkup+="<span>&nbsp;</span>";
+        }
+        if (i % 2 == 0) {
+            newMarkup+="<span>" + s[i] + "</span>";
+        } else {
+            newMarkup+="<span class='off'>" + s[i] + "</span>";
+        }
+    }
+
+    console.log(newMarkup);
+
+    head1.innerHTML = newMarkup;
+
+</script>
+
+<!-- 
+  ////////////////////////////////////////////////
+-->
+    <h1>Hier st<em>e</em>ht eine <div style="transform: skewY(20deg);">Headline</div></h1>
+<!-- 
+  ////////////////////////////////////////////////
+-->
+    <h1>Hier st<em>e</em>ht eine <span style="display: inline-block; transform: skewY(20deg) rotate(-20deg);">Headline</span></h1>
+   <!-- 
+  ////////////////////////////////////////////////
+-->
+   
+    <h1>Hier st<em>e</em>ht eine <span style="display: inline-block; transform: skewY(70deg) rotate(-60deg);   transform-style: preserve-3d;">Headline</span></h1>
+   
+   <!-- 
+  ////////////////////////////////////////////////
+-->
+    <h1>Hier st<em>e</em>ht eine H<span style="display: inline-block; transform: rotate(-20deg);">e</span>adline</h1>
+    
+
+    
+  </main>
+  
+</body>
+
+    
+    <script src="./app.js"></script>
+</html>

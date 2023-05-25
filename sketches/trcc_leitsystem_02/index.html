@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  
+<style>
+
+  body {
+    font-family: sans-serif
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 100px auto;
+
+  }
+
+  .trcc-leitsystem {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      font-size: calc(16px + 2vw);
+      
+  }
+
+  .trcc-leitsystem a {
+    perspective: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    text-decoration: none;
+    overflow: hidden;
+    aspect-ratio: 2/1;
+    color: black;
+    
+  }
+
+  .trcc-leitsystem a div {
+    transition: all 0.4s ease;
+  }
+
+  .trcc-leitsystem a:hover div {
+    transform: rotateY(20deg) scale(200%);
+  }
+
+  .arrow {
+    padding-left: 10px;
+    transition: all 0.1s ease;
+  }
+
+  .trcc-leitsystem a:hover .arrow {
+    padding-left: 50px;
+  }
+
+  .b-top {
+    border-top: 1px solid black;
+  }
+
+  .b-bottom {
+    border-bottom: 1px solid black;
+  }
+
+  .b-left {
+    border-left: 1px solid black;
+  }
+
+  .b-right {
+    border-right: 1px solid black;
+  }
+
+  
+</style>  
+
+<div class="container">
+  <div class="trcc-leitsystem">
+    <a href="courses" class="b-top b-left b-right">
+      <div>Courses</div>
+    </a>
+
+    <a href="courses" class="b-top b-right">
+      <div>Community</div>
+    </a>
+
+    <a href="courses" class="b-left b-top b-right b-bottom">
+      <div>Blog</div>
+    </a>
+
+    <a href="courses" class="b-top b-right b-bottom" style="color: red">
+      <div>Patreon</div>
+    </a>
+  </div>
+</div>
+  
+</body>
+
+    
+    <script src="./app.js"></script>
+</html>

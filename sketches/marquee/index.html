@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+
+</head>
+<body>
+
+  <style>
+    body {
+      margin:0;
+      font-family: sans-serif;
+    }
+  </style>
+  
+<style>
+  #marquee {
+    width: 100%;
+    font-size: 10vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: black;
+    color: #FFFF00;
+    white-space: nowrap;
+  }
+
+  #marqueetxt {
+    padding: 10px 0;
+    margin: 0;
+  }
+</style>
+
+  <div id="marquee">
+    <p id="marqueetxt">
+
+    </p>
+  </div>
+
+  <script>
+
+    var marqueetxt = document.getElementById("marqueetxt");
+    
+    for (var i = 0; i < 100; i++) {
+      marqueetxt.innerHTML += 'New technologies cause funda­mental trans­for­mations. Now is the time to get creative! To find new ways to deal with change, digiti­zation and dis­ruption. To develop, discover and evaluate new oppor­tunities. ';
+    }
+
+    var posX = 0;
+
+    function animate(){
+      marqueetxt.style.transform = "translate(" + posX + "px)";
+      posX-=4;
+
+      if (posX < - marqueetxt.offsetWidth + marquee.offsetWidth) {
+        posX = 0;
+      }
+    }
+
+    window.setInterval(animate, 15);
+
+
+  </script>
+  
+</body>
+
+    
+</html>

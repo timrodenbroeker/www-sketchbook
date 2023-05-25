@@ -1,0 +1,33 @@
+
+
+@font-face {
+    font-family: 'NimbusSans';
+    src: url('/media/nimbus.woff2') format('woff2'),
+         url('/media/nimbus.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "NimbusSans", "Helvetica", "Arial", sans-serif;
+}
+
+html, body {
+    margin:0;
+    background: black;
+}
+
+main {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 30vw;
+    color: white;
+}

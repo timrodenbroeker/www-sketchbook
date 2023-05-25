@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin:0;
+    }
+
+    * {
+      font-family: sans-serif;
+      font-weight: normal;
+    }
+  </style>
+ 
+</head>
+<body>
+
+<!-- APP START -->
+
+<!-- https://3dtransforms.desandro.com/carousel -->
+
+  <style>
+
+    #scrollslider_track {
+      width: 100%;
+      height: 300vh;
+
+      position: relative;
+    }
+
+    #scrollslider_wagon {
+      position: sticky;
+      top:0;
+      background: black;
+    }
+
+    #scrollslider_carousel {
+      display: flex;
+      position: absolute;
+      width: 5000px;
+    }
+
+    #scrollslider_scene {
+      position: relative;
+      
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      overflow: hidden;
+    }
+
+  
+
+    .scrollslider_carousel_cell {
+      width: auto;
+      height: 400px;
+      position: relative;
+      display: block;
+    }
+
+    .scrollslider_carousel_cell img {
+      width: 100%;
+      position: relative;
+    }
+
+    #scrollslider_scene__scroll_indicator {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      
+      z-index: 9999;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+  </style>
+  
+  <section id="scrollslider_track">
+    <div id="scrollslider_wagon">
+
+    <div id="scrollslider_scene">
+
+      <div id="scrollslider_carousel">
+        <div class="scrollslider_carousel_cell" id="scrollslider_carousel_cell__1">
+          <img src="../../media/img/1.jpg">
+        </div>
+        
+        <div class="scrollslider_carousel_cell" id="scrollslider_carousel_cell__2">
+          <img src="../../media/img/2.jpg">
+        </div>
+        
+        <div class="scrollslider_carousel_cell" id="scrollslider_carousel_cell__3">
+          <img src="../../media/img/3.jpg">
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+  </section>
+
+  <script>
+
+function map_range(value, low1, high1, low2, high2) {
+    return low2 + ((high2 - low2) * (value - low1)) / (high1 - low1);
+}
+let lastKnownScrollPosition = 0;
+let ticking = false;
+let scrollslider_carousel = document.getElementById("scrollslider_carousel");
+let scrollslider_track =  document.getElementById("scrollslider_track");
+let scrollslider_scene = document.getElementById("scrollslider_scene");
+
+let scrollslider_carousel_cell__1 = document.getElementById("scrollslider_carousel_cell__1");
+let scrollslider_carousel_cell__2 = document.getElementById("scrollslider_carousel_cell__2");
+let scrollslider_carousel_cell__3 = document.getElementById("scrollslider_carousel_cell__3");
+
+function doSomething(scrollPos) {
+  
+  let rotation = map_range(
+    scrollPos,
+    0,
+    scrollslider_track.offsetHeight - scrollslider_scene.offsetHeight,
+    0,
+    360
+  );
+  
+ 
+  let max = scrollslider_track.offsetHeight - scrollslider_scene.offsetHeight;
+
+  if (scrollPos > max) {
+    rotation = 360;
+    // console.log("scrollPos > max");
+    // console.log("rotation", rotation);
+  }
+
+
+  if (rotation <= 360){
+    // scrollslider_carousel.style.transform = "rotateX(-" + rotation + "deg)";
+  }
+
+
+
+}
+
+document.addEventListener('scroll', function(e) {
+  lastKnownScrollPosition = window.scrollY;
+
+  if (!ticking) {
+    window.requestAnimationFrame(function() {
+      doSomething(lastKnownScrollPosition);
+      ticking = false;
+    });
+
+    ticking = true;
+  }
+});
+
+
+  </script>
+
+
+<!-- APP END -->
+
+
+
+<section id="content" style="background: white; height: 300vh;">
+  <p style="font-size: 100px;">
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+  </p>
+</section>
+  
+  
+</body>
+
+
+
+</html>

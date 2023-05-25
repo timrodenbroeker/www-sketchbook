@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <style>
+            @font-face {
+                font-family: "NimbusSans";
+                src: url("/media/nimbus.woff2") format("woff2"),
+                    url("/media/nimbus.woff") format("woff");
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            * {
+                box-sizing: border-box;
+                font-family: "NimbusSans", "Helvetica", "Arial", sans-serif;
+            }
+
+            html,
+            body {
+                margin: 0;
+            }
+
+            body {
+                background: black;
+            }
+
+            .noselect {
+                -webkit-touch-callout: none; /* iOS Safari */
+                -webkit-user-select: none; /* Safari */
+                -khtml-user-select: none; /* Konqueror HTML */
+                -moz-user-select: none; /* Old versions of Firefox */
+                -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+            }
+
+            body {
+                width: 100%;
+            }
+
+            main {
+                line-height: 100% !important;
+                font-size: 100px;
+                color: #f1f1f1;
+                width: 100%;
+                height: 100vh;
+                overflow: hidden;
+            }
+
+            * {
+                word-wrap: break-word;
+            }
+        </style>
+        <main></main>
+    </body>
+
+    <script>
+        const main = document.querySelector("main");
+
+        function animate() {
+            var chars;
+            const selector = Math.floor(Math.random() * 3);
+            console.log(selector);
+
+            if (selector == 0) {
+                var a = ["/", "|", "."];
+                chars = a;
+            } else if (selector == 1) {
+                var a = ["╤", "╚", "╠"];
+                chars = a;
+            } else if (selector == 2) {
+                var a = ["┌", "┘"];
+                chars = a;
+            }
+            let str = "";
+
+            for (let i = 0; i < 3000; i++) {
+                let selector = Math.floor(Math.random() * chars.length);
+                let ch = chars[selector];
+                str += ch;
+            }
+
+            main.innerHTML = str;
+        }
+
+        window.setInterval(animate, 200);
+    </script>
+</html>

@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin:0;
+    }
+
+    * {
+      font-family: sans-serif;
+      font-weight: normal;
+    }
+  </style>
+ 
+</head>
+<body>
+
+<!-- APP START -->
+
+<!-- https://3dtransforms.desandro.com/carousel -->
+
+  <style>
+
+    #rotator_track {
+      width: 100%;
+      height: 300vh;
+      background: yellow;
+      position: relative;
+    }
+
+    #rotator_wagon {
+      position: sticky;
+      top:0;
+      background: black;
+    }
+
+    #rotator_scene {
+      position: relative;
+      
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 1000px;
+      overflow: hidden;
+    }
+
+    
+    #rotator_carousel {
+      transform-style: preserve-3d;
+      padding: 20px;
+    }
+
+    .rotator_carousel_cell {
+      width: 100%;
+      height: 100%;
+      max-width: 800px;
+      max-height: 600px;
+      cursor: pointer;
+      background: black;
+      position: relative;
+      display: block;
+    }
+
+    .rotator_carousel_cell img {
+      transition: opacity 0.4s ease;
+    }
+
+    #rotator_background_type {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      position: absolute;
+      top:0;
+      left:0;
+      justify-content: center;
+      align-items:center;
+      color: white;
+      font-size: 25vw;
+      overflow: hidden;
+      background-image: url("./s.jpg");
+      background-size: 110%;
+      background-position: center;
+    }
+
+    .rotator_carousel_cell:hover img {
+      opacity: 0;
+    }
+
+    .rotator_carousel_cell img {
+      width: 100%;
+      position: relative;
+    }
+
+    #rotator_scene__scroll_indicator {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      
+      z-index: 9999;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    #rotator_carousel_cell__2 img {
+      transform: rotate(180deg);
+    }
+
+    .rotator_carousel_cell h2 {
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: calc(16px + 10vh);
+      text-align: center;
+      padding:15px;
+      margin: 0;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .rotator_carousel_cell:hover h2 {
+      opacity: 1;
+    }
+
+    #rotator_carousel_cell__2 h2 {
+      transform: rotateX(180deg);
+    }
+
+    @-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}
+
+  </style>
+  
+  <section id="rotator_track">
+    <div id="rotator_wagon">
+      <div id="rotator_background_type">Featured</div>
+    <div id="rotator_scene">
+      <div id="rotator_scene__scroll_indicator">
+        Scroll Down
+      </div>
+      <div id="rotator_carousel">
+        <a class="rotator_carousel_cell" id="rotator_carousel_cell__1">
+          <h2>Community Spotlight: André Burnier</h2>
+          <img src="a.jpg">
+        </a>
+        
+        <a class="rotator_carousel_cell" id="rotator_carousel_cell__2" style="display: none;">
+          <h2>Community Spotlight: André Burnier</h2>
+          <img src="b.jpg">
+        </a>
+        
+        <a class="rotator_carousel_cell" id="rotator_carousel_cell__3" style="display: none;">
+          <h2>Community Spotlight: André Burnier</h2>
+          <img src="c.jpg">
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+  </section>
+
+  <script>
+
+function map_range(value, low1, high1, low2, high2) {
+    return low2 + ((high2 - low2) * (value - low1)) / (high1 - low1);
+}
+let lastKnownScrollPosition = 0;
+let ticking = false;
+let rotator_carousel = document.getElementById("rotator_carousel");
+let rotator_track =  document.getElementById("rotator_track");
+let rotator_scene = document.getElementById("rotator_scene");
+
+let rotator_carousel_cell__1 = document.getElementById("rotator_carousel_cell__1");
+let rotator_carousel_cell__2 = document.getElementById("rotator_carousel_cell__2");
+let rotator_carousel_cell__3 = document.getElementById("rotator_carousel_cell__3");
+
+function doSomething(scrollPos) {
+  
+  let rotation = map_range(
+    scrollPos,
+    0,
+    rotator_track.offsetHeight - rotator_scene.offsetHeight,
+    0,
+    360
+  );
+  
+ 
+  let max = rotator_track.offsetHeight - rotator_scene.offsetHeight;
+
+  if (scrollPos > max) {
+    rotation = 360;
+    // console.log("scrollPos > max");
+    // console.log("rotation", rotation);
+  }
+
+
+  if (rotation <= 360){
+    rotator_carousel.style.transform = "rotateX(-" + rotation + "deg)";
+  }
+  if (rotation > 0 && rotation < 90) {
+    rotator_carousel_cell__1.style.display = "block";
+    rotator_carousel_cell__2.style.display = "none";
+    rotator_carousel_cell__3.style.display = "none";
+  } else if (rotation > 90 && rotation < 270) {
+    rotator_carousel_cell__1.style.display = "none";
+    rotator_carousel_cell__2.style.display = "block";
+    rotator_carousel_cell__3.style.display = "none";
+  } else if (rotation > 270 && rotation < 360) {
+    rotator_carousel_cell__1.style.display = "none";
+    rotator_carousel_cell__2.style.display = "none";
+    rotator_carousel_cell__3.style.display = "block";
+  }
+
+
+}
+
+document.addEventListener('scroll', function(e) {
+  lastKnownScrollPosition = window.scrollY;
+
+  if (!ticking) {
+    window.requestAnimationFrame(function() {
+      doSomething(lastKnownScrollPosition);
+      ticking = false;
+    });
+
+    ticking = true;
+  }
+});
+
+
+  </script>
+
+
+<!-- APP END -->
+
+
+
+<section id="content" style="background: white; height: 300vh;">
+  <p style="font-size: 100px;">
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+  </p>
+</section>
+  
+  
+</body>
+
+
+
+</html>

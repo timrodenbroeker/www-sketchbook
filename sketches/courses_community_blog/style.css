@@ -1,0 +1,30 @@
+#ccb {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 100px 0;
+}
+
+#ccb a {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  transition: background-color 0.4s ease;
+}
+
+#ccb a:hover {
+  background: black !important;
+}
+
+.container-wide {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <style>
+    @font-face {
+      font-family: "Inter";
+      src: url("../assets/Inter-SemiBold.woff") format("woff");
+      font-weight: normal;
+    }
+
+    body,
+    html {
+      margin: 0;
+    }
+
+    #thegrid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    #thegrid .grid-item p {
+      background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(0, 0, 0, 1) 10%,
+        rgba(255, 255, 255, 1) 20%,
+        rgba(0, 0, 0, 1) 30%,
+        rgba(255, 255, 255, 1) 40%,
+        rgba(0, 0, 0, 1) 50%,
+        rgba(255, 255, 255, 1) 60%,
+        rgba(0, 0, 0, 1) 70%,
+        rgba(255, 255, 255, 1) 80%,
+        rgba(0, 0, 255, 1) 90%
+      );
+    }
+
+    p {
+      margin: 0;
+      position: sticky;
+      top: 0;
+      font-size: 30px;
+      text-align: justify;
+    }
+  </style>
+  <body>
+    <section id="thegrid"></section>
+  </body>
+  <script>
+    function buildGrid(data) {
+      var grid = document.getElementById("thegrid");
+
+      data.forEach((item) => {
+        var markup = `
+        <div class="grid-item">
+        <p>
+          ${item.english}
+          </p>
+        </div>
+        `;
+
+        grid.insertAdjacentHTML("beforeend", markup);
+      });
+    }
+    fetch("../../media/meditations.json")
+      .then((response) => response.json())
+      .then((json) => buildGrid(json));
+  </script>
+</html>

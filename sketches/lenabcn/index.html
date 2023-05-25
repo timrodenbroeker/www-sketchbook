@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+        }
+
+        #artboard {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #grid {
+            background: #f1f1f1;
+            font-family: courier;
+            width: 700px;
+            height: 700px;
+            position: relative;
+            font-size: 88px;
+            display: grid;
+        }
+    </style>
+
+    <body>
+        <section id="artboard">
+            <div id="grid"></div>
+        </section>
+        <canvas id="myCanvas"></canvas>
+    </body>
+
+    <script>
+
+        const map = (value, x1, y1, x2, y2) => (value - x1) * (y2 - x2) / (y1 - x1) + x2;
+
+        const img = new Image(); // Create new img element
+        img.src = "./3.jpg"; // Set source path
+        let colorSum = 0;
+        let r, g, b, avg;
+        
+        var tilesX = 12;
+        var tilesY = 10;
+
+        var arr = new Array(tilesX * tilesY);
+
+        var posX,posY;
+        var canvas;
+
+        window.onload = function() {
+
+            var str = "";
+            for (var i = 0; i < tilesX; i++) {
+                str = str + "1fr ";
+            }
+
+            var grid = document.getElementById("grid");
+            grid.style.gridTemplateColumns = str
+
+            canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0, Math.floor(tilesX),Math.floor(tilesY));
+
+            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imageData.data;
+      
+            
+            
+            /*  for(let i = 0; i < data.length; i+=4) {
+                    r = data[x];
+                    g = data[x+1];
+                    b = data[x+2];
+
+                    b = Math.floor((r+g+b) / 3);
+
+                    colorSum += avg;
+
+                    arr[i] = b;
+            }  
+            
+            */
+
+                
+            var chars = "ABCDEFG";
+            var grid = document.getElementById("grid");
+    
+            var tileW = grid.offsetWidth / tilesX;
+            var tileH = grid.offsetHeight / tilesY;
+    
+            for (var x = 0; x < arr.length; x++) {
+                    
+                    var el = document.createElement("div");
+                    el.style.height = grid.offsetHeight / tilesY + "px";
+                    var b = arr[x];
+                    
+                    el.innerHTML = chars.charAt(
+                        // Math.floor(Math.random() * chars.length)
+                        Math.floor(b,0,255,0,chars.length)
+                    );
+                    grid.appendChild(el);
+            }
+        }; 
+
+          
+
+
+       
+    </script>
+</html>

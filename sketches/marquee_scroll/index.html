@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+
+</head>
+<body>
+
+  <style>
+    body {
+      margin:0;
+      font-family: sans-serif;
+    }
+  </style>
+  
+<style>
+  #marquee {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    font-size: 10vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: black;
+    color: #FFFF00;
+    white-space: nowrap;
+  }
+
+  #marqueetxt {
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  #track {
+    height: 1000vh;
+    width: 100%;
+  }
+</style>
+  <div id="track">
+    <div id="marquee">
+      <p id="marqueetxt">
+
+      </p>
+    </div>
+</div>
+
+  <script>
+
+    function map_range(value, low1, high1, low2, high2) {
+      return low2 + ((high2 - low2) * (value - low1)) / (high1 - low1);
+    }
+    var body = document.querySelector("body");
+
+    var marqueetxt = document.getElementById("marqueetxt");
+    var track = document.getElementById("track");    
+    
+    for (var i = 0; i < 1; i++) {
+      marqueetxt.innerHTML += 'New technologies cause funda­mental trans­for­mations. Now is the time to get creative! To find new ways to deal with change, digiti­zation and dis­ruption. To develop, discover and evaluate new oppor­tunities. ';
+    }
+
+    var w = marqueetxt.offsetWidth;
+
+    window.onscroll = function() {
+
+      let offsetX = map_range(
+        window.scrollY,
+        0,
+        track.offsetHeight - window.innerHeight,
+        0,
+        marqueetxt.offsetWidth - marquee.offsetWidth
+      );
+
+      marqueetxt.style.transform = "translate(-" + offsetX + "px)";
+      console.log(window.scrollY);
+    };
+
+
+
+  </script>
+  
+</body>
+
+    
+</html>
