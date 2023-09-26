@@ -1,5 +1,19 @@
 [
   {
+    "title": "content schedule",
+    "url": "content-schedule",
+    "final": true,
+    "tags": [],
+    "date": "2023-09-03"
+  }, 
+  {
+    "title": "trcc-start-courses-p5",
+    "url": "trcc-start-courses-p5",
+    "final": true,
+    "tags": [],
+    "date": "2023-08-07"
+  }, 
+  {
     "title": "trcc_leitsystem_01",
     "url": "trcc_leitsystem_01",
     "final": true,
