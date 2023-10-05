@@ -1,0 +1,26 @@
+img {
+    display: block;
+    width: 100%;
+}
+
+* {
+    font-family: arial, sans-serif;
+}
+
+#app {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    margin: 0 10px 10px 0;
+    max-width: 200px;
+}
+
+.item p {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 5px;
+    font-family: courier;
+}

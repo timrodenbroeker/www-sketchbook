@@ -8,7 +8,7 @@ json_file="sketches.json"
 current_date=$(date +%F)
 
 # Define the new object you want to add (replace with your own data)
-new_object="{\"title\": \"$name\",\"url\": \"$name\",\"final\": false,\"tags\": [],\"date\": \"$current_date\",\"thumb\": \"placeholder.png\"}"
+new_object="{\"title\": \"$name\",\"url\": \"$name\",\"final\": false,\"tags\": [],\"date\": \"$current_date\",\"thumb\": \"thumbs/placeholder.png\"}"
 
 # Check if the JSON file exists
 if [ ! -f "$json_file" ]; then
