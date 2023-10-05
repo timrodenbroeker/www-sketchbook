@@ -148,7 +148,8 @@
     "url": "gridlab",
     "final": false,
     "tags": [],
-    "date": "2022-09-26"
+    "date": "2022-09-26",
+    "thumb": "thumbs/placeholder.png"
   },
   {
     "title": "blogpost headlines",
@@ -171,7 +172,8 @@
     "url": "rotateSquare2",
     "final": true,
     "tags": [],
-    "date": "2022-09-18"
+    "date": "2022-09-18",
+    "thumb": "thumbs/placeholder.png"
   },
   {
     "title": "rotateSquare2",
