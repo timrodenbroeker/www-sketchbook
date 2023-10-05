@@ -10,4 +10,7 @@
   - Überall global teilbar
 - NetArt ist in Vergessenheit geraten
 
+## Magic Triangle
+- Nur Vanilla HTML, CSS und Javascript
+
 

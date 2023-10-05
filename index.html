@@ -3,15 +3,14 @@
 <head>
   <meta charset="utf-8">
   <title>www sketchbook</title>
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <style>
 
-
 * {
     box-sizing: border-box;
+    font-family: arial,sans-serif;
 }
 
 html, body {
@@ -38,6 +37,10 @@ body {
 
     font-weight: normal;
   }
+
+img {
+  width: 100%;
+}
 
   main {
       padding: 15px;
@@ -92,17 +95,6 @@ a {
   text-decoration: none;
 }
 
-.main-grid {
-  display: grid; 
-  grid-template-columns: 8fr 3fr 3fr;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 0 15px;
-  width: 100%;
-
-}
 
 .sketch {
   padding: 5px 0;
@@ -127,6 +119,19 @@ a {
 .sketch:hover * {
 
 }
+
+
+
+#the-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.post {
+  margin-bottom: 30px;
+}
+
   </style>
  
 
@@ -138,20 +143,13 @@ a {
       <div class="container" style="margin-bottom: 120px">
         <a style="font-weight: normal; font-size: 50px;">www_sketchbook</a>
       </div>
-      <div class="container">
-        <div target="_blank" class="main-grid" style="margin-bottom: 25px;">
-          <div style="padding-right: 10px;">
-            Title
-          </div>
-          <div style="padding-right: 10px;">
-            Folder
-          </div>
-          <div style="padding-right: 10px;">
-            Date
-          </div>
-        </div>
-        <div v-for="(post, index) in posts" class="post" style="border-bottom: 1px solid #222222;">
-          <a class="main-grid sketch" target="_blank" v-bind:href=`../sketches/${post.url}` v-bind:class="[post.final == true ? 'final' : '']">
+      <div id="the-grid">
+        <div v-for="(post, index) in posts" class="post">
+          <a class="sketch" target="_blank" v-bind:href=`../sketches/${post.url}` v-bind:class="[post.final == true ? 'final' : '']">
+            <div class="thumb" v-if="typeof post.thumb !== 'undefined'">
+              <img v-bind:src="post.thumb">
+            </div>
+            
             <div class="title">
               {{post.title}}
             </div>
