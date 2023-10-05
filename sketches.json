@@ -5,15 +5,7 @@
     "final": false,
     "tags": [],
     "date": "2023-10-05",
-    "thumb": "thumbs/placeholder.png"
-  },
-  {
-    "title": "neuersketch2",
-    "url": "neuersketch2",
-    "final": false,
-    "tags": [],
-    "date": "2023-10-05",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/pocoapoco.gif"
   },
   {
     "title": "trcc-start-courses-p5",
@@ -45,7 +37,7 @@
     "final": false,
     "tags": [],
     "date": "2023-04-09",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/ccdefinition.png"
   },
   {
     "title": "fullpagevideo",
@@ -69,15 +61,7 @@
     "final": true,
     "tags": [],
     "date": "2023-03-30",
-    "thumb": "thumbs/placeholder.png"
-  },
-  {
-    "title": "imagecols2",
-    "url": "imagecols",
-    "final": true,
-    "tags": [],
-    "date": "2023-03-30",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/imagescols1.png"
   },
   {
     "title": "meditations3",
@@ -85,7 +69,7 @@
     "final": true,
     "tags": [],
     "date": "2023-03-30",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/meditations3.png"
   },
   {
     "title": "meditations2",
@@ -93,7 +77,7 @@
     "final": true,
     "tags": [],
     "date": "2023-03-30",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/med2.png"
   },
   {
     "title": "meditations1",
@@ -101,7 +85,7 @@
     "final": true,
     "tags": [],
     "date": "2023-03-30",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/med1.png"
   },
   {
     "title": "courses_community_blog",
@@ -112,36 +96,12 @@
     "thumb": "thumbs/placeholder.png"
   },
   {
-    "title": "curriculum01",
-    "url": "curriculum01",
-    "final": true,
-    "tags": [],
-    "date": "2022-11-29",
-    "thumb": "thumbs/placeholder.png"
-  },
-  {
     "title": "curriculum02",
     "url": "curriculum02",
     "final": true,
     "tags": [],
     "date": "2022-11-29",
-    "thumb": "thumbs/placeholder.png"
-  },
-  {
-    "title": "courseOverview",
-    "url": "courseOverview",
-    "final": false,
-    "tags": [],
-    "date": "2022-11-10",
-    "thumb": "thumbs/placeholder.png"
-  },
-  {
-    "title": "Radio button",
-    "url": "radiobuttons",
-    "final": false,
-    "tags": [],
-    "date": "2022-11-06",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/curriculumracks1.png"
   },
   {
     "title": "Featured posts",
@@ -149,7 +109,7 @@
     "final": false,
     "tags": [],
     "date": "2022-11-06",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/folchslider1.png"
   },
   {
     "title": "Grid Laboratory",
@@ -157,7 +117,7 @@
     "final": false,
     "tags": [],
     "date": "2022-09-26",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/gridlab.png"
   },
   {
     "title": "blogpost headlines",
@@ -165,23 +125,16 @@
     "final": true,
     "tags": [],
     "date": "2022-09-23",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/headlines.png"
   },
+
   {
     "title": "rotateSquare2",
     "url": "rotateSquare2",
     "final": true,
     "tags": [],
     "date": "2022-09-18",
-    "thumb": "thumbs/placeholder.png"
-  },
-  {
-    "title": "rotateSquare2",
-    "url": "rotateSquare2",
-    "final": true,
-    "tags": [],
-    "date": "2022-09-18",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/rotatingsquare2.png"
   },
   {
     "title": "rotatingcube",
@@ -189,7 +142,7 @@
     "final": true,
     "tags": [],
     "date": "2022-09-18",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/rotatingcube.png"
   },
   {
     "title": "carousel",
@@ -197,7 +150,7 @@
     "final": true,
     "tags": [],
     "date": "2022-09-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/carousel.png"
   },
   {
     "title": "letterspacing1",
@@ -205,7 +158,7 @@
     "final": true,
     "tags": [],
     "date": "2022-09-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/letterspacing.png"
   },
   {
     "title": "rotateSquare",
@@ -213,7 +166,7 @@
     "final": true,
     "tags": [],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/rotatingsquare.png"
   },
   {
     "title": "scrollprogress",
@@ -221,7 +174,7 @@
     "final": true,
     "tags": [],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/scrollprogress.png"
   },
   {
     "title": "marquee_scroll",
@@ -229,7 +182,7 @@
     "final": true,
     "tags": [],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/marquee.png"
   },
   {
     "title": "marquee",
@@ -237,7 +190,7 @@
     "final": true,
     "tags": [],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/marquee.png"
   },
   {
     "title": "onclick",
@@ -253,27 +206,11 @@
     "final": false,
     "tags": [],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
-  },
-  {
-    "title": "Clock 1",
-    "url": "clock1",
-    "final": false,
-    "tags": [],
-    "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/text3d.png"
   },
   {
     "title": "pre1",
     "url": "pre1",
-    "final": false,
-    "tags": [],
-    "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
-  },
-  {
-    "title": "Drag and Drop",
-    "url": "dragAndDrop",
     "final": false,
     "tags": [],
     "date": "2022-01-01",
@@ -293,7 +230,7 @@
     "final": true,
     "tags": [],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/cursor.png"
   },
   {
     "title": "loadJson",
@@ -309,7 +246,7 @@
     "final": true,
     "tags": [],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/fiftyfifty1.png"
   },
   {
     "title": "Slider inspired by the Website of Folch Studio",
@@ -317,7 +254,7 @@
     "final": true,
     "tags": [],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/folchslider2.png"
   },
   {
     "title": "rotator01",
@@ -335,7 +272,7 @@
       "forms"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/textval.png"
   },
   {
     "title": "Radio Button",
@@ -345,7 +282,7 @@
       "forms"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/radiobuttons.png"
   },
   {
     "title": "Text Input",
@@ -355,7 +292,7 @@
       "forms"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/textinput.png"
   },
   {
     "title": "Get headline from peripheral website",
@@ -385,7 +322,7 @@
       "game"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/scrollmeditations.png"
   },
   {
     "title": "abcdefghijklmnopqrstuvwxyz",
@@ -395,7 +332,7 @@
       "game"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/abcd.png"
   },
   {
     "title": "Responsive Sun",
@@ -405,7 +342,7 @@
       "game"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/responsivesun.png"
   },
   {
     "title": "Gridpaint 2",
@@ -415,7 +352,7 @@
       "game"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/gridpaint2.png"
   },
   {
     "title": "Gridpaint",
@@ -425,7 +362,7 @@
       "game"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/gridpaint.png"
   },
   {
     "title": "Loop / Rotation",
@@ -435,7 +372,7 @@
       "time"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/rotat.png"
   },
   {
     "title": "Javascript Animation with Set Interval",
@@ -455,7 +392,7 @@
       "sensors"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/webcam.png"
   },
   {
     "title": "Collage 3d",
@@ -475,7 +412,7 @@
       "space"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/blurredtext.png"
   },
   {
     "title": "Plane Scroll",
@@ -485,7 +422,7 @@
       "space"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/thereisloveinyou.png"
   },
   {
     "title": "Textwall 3D",
@@ -495,7 +432,7 @@
       "space"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/textwall3d.png"
   },
   {
     "title": "Images Static Scroll",
@@ -505,7 +442,7 @@
       "collage"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/staticscroll.png"
   },
   {
     "title": "Images Static",
@@ -515,7 +452,7 @@
       "collage"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/staticscroll.png"
   },
   {
     "title": "Images",
@@ -525,7 +462,7 @@
       "collage"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/staticscroll.png"
   },
   {
     "title": "Scale a circle with a slider",
@@ -535,7 +472,7 @@
       "tool"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/slidercircle.png"
   },
   {
     "title": "Random Knowledge",
@@ -565,7 +502,7 @@
       "random"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/randomcomp.png"
   },
   {
     "title": "Canvas Lines",
@@ -575,7 +512,7 @@
       "random"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/canvaslines.png"
   },
   {
     "title": "Random BackgroundImage",
@@ -585,7 +522,7 @@
       "random"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/ranombgimg.png"
   },
   {
     "title": "Random Image Source",
@@ -595,7 +532,7 @@
       "random"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/ranombgimg.png"
   },
   {
     "title": "Random Char",
@@ -605,7 +542,7 @@
       "random"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/randomchar.png"
   },
   {
     "title": "Ascii Poem",
@@ -616,7 +553,7 @@
       "poetry"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/asciipoem.png"
   },
   {
     "title": "Fabrics",
@@ -626,14 +563,6 @@
       "random"
     ],
     "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
-  },
-  {
-    "title": "letterspacing",
-    "url": "letterspacing",
-    "final": true,
-    "tags": [],
-    "date": "2022-01-01",
-    "thumb": "thumbs/placeholder.png"
+    "thumb": "thumbs/fabrics.png"
   }
 ]

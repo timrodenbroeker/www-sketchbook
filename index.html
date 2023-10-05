@@ -20,6 +20,7 @@ html, body {
 
 body {
   font-size: 20px;
+  background: #f1f1f1;
 }
 
 .noselect {
@@ -40,6 +41,7 @@ body {
 
 img {
   width: 100%;
+  margin:0;
 }
 
   main {
@@ -145,10 +147,10 @@ a {
       </div>
       <div id="the-grid">
         <div v-for="(post, index) in posts" class="post">
-          <a class="sketch" target="_blank" v-bind:href=`../sketches/${post.url}` v-bind:class="[post.final == true ? 'final' : '']">
-            <div class="thumb" v-if="typeof post.thumb !== 'undefined'">
+          <div class="sketch" v-bind:class="[post.final == true ? 'final' : '']">
+            <a class="thumb" target="_blank" v-bind:href=`../sketches/${post.url}`  v-if="typeof post.thumb !== 'undefined'">
               <img v-bind:src="post.thumb">
-            </div>
+            </a>
             
             <div class="title">
               {{post.title}}
@@ -159,7 +161,11 @@ a {
               <div class="mono" style="padding-right: 10px; color: #aaaaaa;">
                 {{post.date}}
               </div>
-          </a>
+
+              <a v-bind:href="'vscode://file//home/tim/git/www-sketchbook/sketches/' + post.url" class="mono" style="padding-right: 10px; color: #aaaaaa;">
+                edit
+              </a>
+            </div>
         </div>
       </div>
       
