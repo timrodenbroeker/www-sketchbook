@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        font-family: arial;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      main {
+        width: 100%;
+        height: 100vh;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #phone {
+        background: #cccccc;
+        width: 400px;
+        height: 700px;
+        overflow-y: scroll;
+      }
+      .message {
+        color: white;
+        padding: 5px 10px;
+        max-width: 250px;
+        border-radius: 10px;
+        margin: 5px;
+      }
+
+      .message-martin .message {
+        background: green;
+      }
+
+      .message-tim .message {
+        background: blue;
+      }
+
+      .message-martin {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        margin: 15px 0;
+      }
+      .message-tim {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        margin: 15px 0;
+      }
+
+      .message-tim img {
+        max-width: 250px;
+        margin: 5px;
+      }
+    </style>
+
+    <main>
+      <div id="phone">
+        <div class="message-tim">
+          <div class="message">
+            Hey Martin! I've built this really cool little application with
+            Processing to create form-based flexible visual systems. It's really
+            just a rough prototype. Do you wan't to see it?
+          </div>
+        </div>
+        <div class="message-martin">
+          <div class="message">Yes, for sure!</div>
+        </div>
+        <div class="message-tim">
+          <img src="./media/1.gif" />
+        </div>
+        <div class="message-martin">
+          <div class="message">
+            That's super interesting because you can see the process here. How
+            did you do that exactly?
+          </div>
+        </div>
+        <div class="message-tim">
+          <div class="message">
+            I have built a small application with Processing. It is a grid
+            system of 5*5 tiles. When you click on one of the tiles, a new
+            component is selected. You can imagine it as if the tiles are all on
+            a stack. When you click, the top tile is taken away so that the one
+            below it becomes visible.
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    const objDiv = document.getElementById("phone");
+    objDiv.scrollTop = 100 + "px";
+    console.log(objDiv.scrollTop);
+  </script>
+</html>
