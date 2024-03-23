@@ -1,0 +1,46 @@
+<head> </head>
+<body>
+  <h1 id="rotate-colors">Headline</h1>
+  <script>
+    const intervalID = setInterval(rotateColor, 50);
+
+    var colors = [
+      "#ff0000",
+      "#00ff00",
+      "#ffff00",
+      "#0000ff",
+      "#ff0000",
+      "#00ff00",
+      "#ffff00",
+      "#0000ff",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+      "#ff0000",
+    ];
+    var headlineCourses = document.getElementById("rotate-colors");
+    var counter = 0;
+    function rotateColor() {
+      counter++;
+      var selector = counter % (colors.length - 1);
+      var c = colors[selector];
+      headlineCourses.style.color = c;
+    }
+  </script>
+</body>

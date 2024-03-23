@@ -1,0 +1,67 @@
+<head>
+
+</head>
+
+<body>
+
+    <style>
+        /* The animation code */
+        /* @keyframes example {
+            from {filter: blur(10px)}
+            to {filter: blur(0);}
+        } */
+    
+        @keyframes example {
+            from {color: #412dc5}
+            to {color: white}
+        }
+    
+        #manifesto span {
+            display: none;
+            animation-name: example;
+            font-size: calc(16px + 3vw);
+            line-height: 100%;
+            animation-duration: 0.5s;
+            transition: color 0.4s ease;
+        }
+    
+        #manifesto span:hover {
+            color: yellow;
+            
+        }
+    </style>
+    
+    <header style="width: 100%; height: 100vh; background: #412dc5;">
+        <p id="manifesto" style="color: white; padding: 10px;">
+            <span>(1) Coding Systems is a creative process.</span>
+            <span>(2) The result of coding systems is emergent.</span>
+            <span>(3) Coding Systems is a tool.</span>
+            <span>(4) It codifies flexible systems into a language that makes them executable by machines but used by humans.</span>
+            <span>(5) Coding Systems believes in the human as the driving force behind thinking.</span>
+            <span>(6) Tech should enhance thinking and not obscure it.</span>
+            <span>(7) Tech and the dynamics behind it, need to stay transparent in its incentives.</span>
+            <span>(8) Coding Systems strives for a better understanding of the costs and consequences of our work and wants to act accordingly.</span>
+            <span>(9) While we want to work on real-life projects, we are teachers at heart.</span>
+        </p>
+    </header>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    var manifesto = document.getElementById("manifesto");
+    var spans = manifesto.getElementsByTagName("span");
+
+    function showSpan(index) {
+      if (index < spans.length) {
+        spans[index].style.display = "inline";
+        setTimeout(function () {
+          showSpan(index + 1);
+        }, 100); // Adjust the delay (in milliseconds) between each span appearance
+      }
+    }
+
+    showSpan(0);
+  });
+</script>
+
+</body>
