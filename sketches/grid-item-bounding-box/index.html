@@ -1,0 +1,62 @@
+<head>
+
+</head>
+
+<body>
+
+    <style>
+
+        body, html {
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+  
+
+        #grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+
+
+    </style>
+
+    <style>
+
+            .grid-item-img-wrapper {
+                aspect-ratio: 1/1;
+                overflow: hidden;
+                display: flex;
+                padding: 15px;
+            }
+
+            .grid-item-img-wrapper img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+
+    </style>
+
+<main id="grid">
+    <div class="grid-item">
+        <div class="grid-item-img-wrapper">
+            <img src="1.gif">
+        </div>
+    </div>
+    <div class="grid-item">
+        <div class="grid-item-img-wrapper">
+            <img src="Lowercasea.gif">
+        </div>
+    </div>
+    <div class="grid-item">
+        <div class="grid-item-img-wrapper">
+            <img src="tim-galicia-03-43.jpg">
+        </div>
+    </div>
+</main>
+
+</body>
