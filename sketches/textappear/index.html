@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Effect</title>
+    <style>
+      .heading {
+        font-size: 2em;
+        font-family: Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">Hello, World!</div>
+
+    <script>
+      // Step 1: Define the character set
+      const track =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:'\",.<>?/`~ ";
+
+      // Initialize state
+      let state = "";
+
+      // Step 2: When the page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        const headingElement = document.querySelector(".heading");
+        const target = headingElement.textContent;
+        state = " ".repeat(target.length);
+
+        // Step 3: Replace text with spaces
+        headingElement.textContent = state;
+
+        // Step 4: Create a loop with a rhythm of 10ms
+        const updateText = () => {
+          let updatedState = "";
+          let complete = true;
+
+          for (let i = 0; i < target.length; i++) {
+            if (state[i] !== target[i]) {
+              complete = false;
+              const currentIndex = track.indexOf(state[i]);
+              const nextIndex = (currentIndex + 1) % track.length;
+              updatedState += track[nextIndex];
+            } else {
+              updatedState += state[i];
+            }
+          }
+
+          state = updatedState;
+          headingElement.textContent = state;
+
+          if (!complete) {
+            setTimeout(updateText, 10);
+          }
+        };
+
+        updateText();
+      });
+    </script>
+  </body>
+</html>
