@@ -1,0 +1,111 @@
+<head> </head>
+<body>
+  <style>
+    body {
+      margin: 0;
+      padding: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+      display: block;
+      margin: 0 0 10px 0;
+    }
+
+    input,
+    select,
+    button {
+      cursor: pointer;
+    }
+
+    input[type="range"] {
+      overflow: hidden;
+      height: 20px;
+      width: 200px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    input[type="text"] {
+      background: #dddddd;
+      -webkit-appearance: none;
+      box-shadow: none;
+      border: 0;
+      width: 200px;
+      padding: 5px;
+    }
+
+    textarea {
+      background: #dddddd;
+      -webkit-appearance: none;
+      box-shadow: none;
+      border: 0;
+      width: 200px;
+      padding: 5px;
+      resize: none;
+    }
+
+    select {
+      width: 200px;
+      background: #ddd;
+      border-radius: 0;
+      border: 0;
+      padding: 5px;
+    }
+
+    button {
+      width: 200px;
+      background: #ddd;
+      border-radius: 0;
+      border: 0;
+      padding: 5px;
+      cursor: pointer;
+    }
+    button:active {
+      background-color: yellow;
+    }
+
+    ::-webkit-slider-runnable-track {
+      background: #ddd;
+    }
+
+    ::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 0;
+      height: 40px;
+      background: #fff;
+      box-shadow: -200px 0 0 200px black;
+      border: none;
+    }
+
+    ::-moz-range-track {
+      height: 40px;
+      background: #ddd;
+    }
+
+    ::-moz-range-thumb {
+      background: #fff;
+      height: 40px;
+      width: 0;
+      border: none;
+      border-radius: 0 !important;
+      box-shadow: -200px 0 0 200px black;
+      box-sizing: border-box;
+    }
+  </style>
+  <input type="range" value="25" />
+  <input type="text" />
+  <textarea rows="6">text here</textarea>
+  <select>
+    <option>Option A</option>
+    <option>Option B</option>
+    <option>Option C</option>
+  </select>
+  <button>Do something!</button>
+</body>
