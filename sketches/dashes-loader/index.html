@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terminal Loader</title>
+  <style>
+    #loader {
+      font-family: monospace;
+      font-size: 600px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div id="loader"></div>
+
+  <script>
+    // Array of symbols for the loader animation
+    const symbols = ['-', '/', '|', '\\'];
+
+    // Function to update the loader with the next symbol
+    function updateLoader() {
+      // Get the loader element
+      const loader = document.getElementById('loader');
+      
+      // Get the next symbol
+      const currentSymbol = loader.textContent;
+      const currentIndex = symbols.indexOf(currentSymbol);
+      const nextIndex = (currentIndex + 1) % symbols.length;
+      const nextSymbol = symbols[nextIndex];
+      
+      // Update the loader with the next symbol
+      loader.textContent = nextSymbol;
+    }
+
+    // Start the loader animation
+    function startLoader() {
+      // Get the loader element
+      const loader = document.getElementById('loader');
+
+      // Set an interval to update the loader every 200 milliseconds
+      setInterval(updateLoader, 100);
+    }
+
+    // Call startLoader function when the page is loaded
+    window.onload = startLoader;
+  </script>
+</body>
+</html>

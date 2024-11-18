@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Typewriter Effect</title>
+    <style>
+        .typewriter {
+            font-size: 10vw;
+            font-family: sans-serif;
+            text-align: center;
+            margin-bottom: 20px; /* Add spacing between typewriter elements */
+        }
+
+        .cursor::after {
+            content: "_";
+            animation: blink-animation 0.3s infinite; /* Add blinking animation */
+        }
+
+        @keyframes blink-animation {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="typewriter">Meandering Essays on Life with Technology</h1>
+
+
+    <script>
+        const typewriters = document.querySelectorAll(".typewriter");
+
+        typewriters.forEach((typewriter) => {
+            let text = typewriter.textContent.trim(); // Get text content of the h1 element
+            let elHeight = typewriter.offsetHeight;
+            typewriter.innerHTML = "";
+            typewriter.classList.add("cursor");
+            typewriter.style.height = elHeight + "px";
+
+            let i = 0;
+            const speed = 40;
+
+            function typeWriter() {
+                if (i < text.length) {
+                    typewriter.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                } else {
+                    typewriter.classList.remove("cursor");
+                }
+            }
+
+            typeWriter();
+        });
+
+        // Event listener to remove height styling when window is resized
+        window.addEventListener('resize', function() {
+            typewriters.forEach((typewriter) => {
+                typewriter.style.height = ''; // Remove height styling
+            });
+        });
+    </script>
+</body>
+</html>
